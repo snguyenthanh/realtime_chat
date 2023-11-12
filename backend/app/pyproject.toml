@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = []
+
+[tool.poetry.dependencies]
+python = "^3.10"
+uvicorn = "^0.23.2"
+fastapi = "^0.103.0"
+requests = "^2.31.0"
+tenacity = "^8.2.3"
+pydantic = "^2.3.0"
+gunicorn = "^21.2.0"
+psycopg2-binary = "^2.9.7"
+alembic = "^1.11.3"
+sqlalchemy = "^2.0.20"
+pydantic-settings = "^2.0.3"
+orjson = "^3.9.10"
+asyncpg = "^0.29.0"
+python-jose = "^3.3.0"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+websockets = "^12.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.286"
+black = "^23.7.0"
+isort = "^5.12.0"
+sqlalchemy-stubs = "^0.4"
+pytest-cov = "^4.1.0"
+mypy = "^1.5.1"
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+line_length = 88
+[build-system]
+requires = ["poetry>=1.6"]
+build-backend = "poetry.masonry.api"
+
+[tool.ruff]
+ignore = ["E402"]
